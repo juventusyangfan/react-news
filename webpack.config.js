@@ -37,7 +37,7 @@ module.exports = {
         // listen to code updates emitted by hot middleware:
         'webpack-hot-middleware/client',
         // your code:
-        './src/index.js'
+        './src/app.js'
     ],
     output: {
         path: outpath,

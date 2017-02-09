@@ -24,7 +24,7 @@ app.listen(3456, function(err) {
     console.log(err);
     return;
   }
-  console.log('Listening at http://localhost:3456');
+  console.log('Listening at http://localhost:8088');
 });
 
-open('http://localhost:3456','chrome');
+open('http://localhost:8088','chrome');
