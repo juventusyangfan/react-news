@@ -28,7 +28,7 @@ const Lists = props => {
                         <FlipMove disableAllAnimations={disableAllAnimations} enterAnimation={enterAnimation}
                                   easing='ease-out' duration='400' staggerDelayBy='40' staggerDurationBy='4'>
                             {news.map((newsOne, i) =>
-                                    <Link key={i} to={newsOne.url} className={styles.link}>
+                                    <a key={i} href={newsOne.url} className={styles.link}>
                                         <ListItem
                                             leftAvatar={<Avatar src={newsOne.picUrl} />}
                                             primaryText={
@@ -44,7 +44,7 @@ const Lists = props => {
                                                 }
                                             />
                                         <Divider inset={true}/>
-                                    </Link>
+                                    </a>
                             )}
                         </FlipMove>
                     </List>
