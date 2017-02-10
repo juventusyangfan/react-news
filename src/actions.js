@@ -37,7 +37,7 @@ const receiveNews = (tab, news, page, num) => ({
 const fetchNews = (tab, page = 1, num = 10) => {
     return dispatch => {
         dispatch(requestNews(tab));
-        fetch(`http://api.tianapi.com/${tab}/?page=${page}&num=${num}&key=${APIKEY}`)//天行网新闻数据api
+        fetch(`https://api.tianapi.com/${tab}/?page=${page}&num=${num}&key=${APIKEY}`)//天行网新闻数据api
             .then(response => {//fetch中加大括号必须有返回值
                 return response.json();
             })
