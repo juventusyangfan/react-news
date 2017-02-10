@@ -14,9 +14,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 injectTapEventPlugin();
 
+var history = process.env.NODE_ENV !== 'production' ? browserHistory : hashHistory;
 render(
-    <Provider>
-        <Router routes={routes} history={hashHistory}/>
+    <Provider store={store}>
+        <Router routes={routes} history={history}/>
     </Provider>,
     document.getElementById("root")
 )

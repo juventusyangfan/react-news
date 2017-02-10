@@ -22,7 +22,7 @@ class Header extends Component {
         this.setState({
             slideIndex: value
         });
-        this.props.onclick(this.props.tabs[value].filter)
+        this.props.onClick(this.props.tabs[value].filter)
     };
 
     componentWillMount() {
