@@ -19,7 +19,7 @@ const tabDataItem = (state = {isFetching: false, page: 0, scrollT: 0, news: []},
             return {
                 ...state,
                 isFetching: true
-            }
+            };
         case RECEIVE_NEWS:
             if (state.page < action.page) {
                 let news = state.news;
@@ -31,12 +31,12 @@ const tabDataItem = (state = {isFetching: false, page: 0, scrollT: 0, news: []},
                 page: action.page,
                 news: action.news,
                 num: action.num
-            }
+            };
         case RECORD_SCROLLT:
             return {
                 ...state,
                 scrollT: action.scrollT
-            }
+            };
         default :
             return state;
     }
@@ -50,9 +50,9 @@ const tabData = (state = {}, action) => {
             return {
                 ...state,
                 [action.tab]: tabDataItem(state[action.tab], action)
-            }
+            };
         default:
-            return state
+            return state;
     }
 };
 
@@ -60,7 +60,7 @@ const homePage = (state = {selectedTab: "tiyu", tabData: {}}, action) => {
     if (state) {
         const sTab = selectedTab(state.selectedTab, action);
         const tData = tabData(state.tabData, action);
-        return {...state, selectedTab: sTab, tabData: tData}
+        return {...state, selectedTab: sTab, tabData: tData};
     }
     return state;
 };

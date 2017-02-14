@@ -53,7 +53,7 @@ class HomePage extends Component {
                 openSnackbar:false
             })
         },1000);
-    }
+    };
     handleClick = (tab) => {
         let {scrollT} = getSize();
         const {selectedTab,dispatch,tabData} = this.props;
@@ -154,8 +154,6 @@ class HomePage extends Component {
                 this.loadMore()
             }
 
-
-            // 由于下面的操作比较费cpu,所以进行判断是否为手机端
             const ua = navigator.userAgent;
             if (ua.indexOf('Mobile') === -1) {
                 if (!lastScrollY || !scrollT) {
